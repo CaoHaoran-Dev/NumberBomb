@@ -1,0 +1,49 @@
+/* ================= 游戏主界面 ================= */
+"game.title" = "数字炸弹";
+"game.input.placeholder" = "输入一个数字";
+"game.guess" = "猜";
+"game.restart" = "重新开始";
+"game.tooLow" = "太小了！";
+"game.tooHigh" = "太大了！";
+"game.correct" = "猜对了！";
+"game.best %@" = "最佳：%@ 次";
+
+/* ================= 难度选择 ================= */
+"difficulty.title" = "选择难度";
+"difficulty.easy" = "简单 (1-50)";
+"difficulty.medium" = "中等 (1-100)";
+"difficulty.hard" = "困难 (1-500)";
+"difficulty.custom" = "自定义";
+"difficulty.custom.lower" = "最小";
+"difficulty.custom.upper" = "最大";
+"difficulty.custom.invalid" = "最小值必须小于最大值。";
+
+/* ================= 帮助系统 ================= */
+"help.title" = "帮助";
+"help.section.overview" = "概述";
+"help.overview.desc" = "数字炸弹是一款极致简洁的猜数字游戏。请用最少的次数找出隐藏的数字。";
+"help.section.rules" = "如何游玩";
+"help.rules.point1" = "在输入框中输入数字，并点击“猜”。";
+"help.rules.point2" = "系统会提示你猜的数字偏大还是偏小。";
+"help.rules.point3" = "不断缩小范围，直到猜中炸弹！";
+"help.section.difficulty" = "难度说明";
+"help.difficulty.easy" = "简单：1 到 50。";
+"help.difficulty.medium" = "中等：1 到 100。";
+"help.difficulty.hard" = "困难：1 到 500。";
+"help.difficulty.custom" = "自定义：自己指定最小值和最大值。";
+"help.section.shortcuts" = "快捷键";
+"help.shortcut.restart" = "重新开始游戏";
+"help.shortcut.difficulty" = "切换难度";
+"help.shortcut.help" = "打开帮助";
+"help.shortcut.guess" = "提交猜测";
+"help.section.about" = "关于";
+"help.about.desc" = "由 Haoran 制作。使用 SwiftUI 编写。致力于提供最原生、无冗余的游戏体验。";
+
+/* ================= 通用 ================= */
+"common.close" = "关闭";
+"common.apply" = "应用";
+
+/* ================= macOS 菜单栏 ================= */
+"menu.help" = "数字炸弹帮助";
+"menu.newGame" = "新游戏";
+"menu.changeDifficulty" = "切换难度…";

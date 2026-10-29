@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 76;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,14 +16,67 @@
 		AD62176B30936096009DBBF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NumberBomb Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7F761C2F5406BC004F7A57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA1F27930937F2C00963DA7 /* NumberBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA1F294309380A900963DA7 /* NumberBomb For iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NumberBomb For iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		ADA1F28C30937FAA00963DA7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Classic/ContentView.swift,
+				Classic/NumberBombApp.swift,
+				Views/iOS/GameView.swift,
+			);
+			target = ADA1F27830937F2C00963DA7 /* NumberBomb */;
+		};
+		ADA1F28F30937FAE00963DA7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Classic/ContentView.swift,
+				Classic/NumberBombApp.swift,
+			);
+			target = AD7F76142F5406B9004F7A57 /* NumberBomb Classic */;
+		};
+		ADDA33C13093816F00AD8F02 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				/Localized/Resources/Localizable.strings,
+				App/NumberBombApp.swift,
+				Models/BestRecordStore.swift,
+				Models/GameEngine.swift,
+				Utils/GlassModifier.swift,
+				ViewModels/DifficultyViewModel.swift,
+				ViewModels/GameViewModel.swift,
+				Views/iOS/GameView.swift,
+				Views/Shared/DifficultySelectionView.swift,
+				Views/Shared/HelpView.swift,
+			);
+			target = ADA1F293309380A900963DA7 /* NumberBomb For iOS */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		AD62162930935F9A009DBBF7 /* Classic */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Classic; sourceTree = "<group>"; };
+		ADA1F27A30937F2C00963DA7 /* NumberBomb */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (ADA1F28F30937FAE00963DA7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ADA1F28C30937FAA00963DA7 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ADDA33C13093816F00AD8F02 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = NumberBomb; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD7F76122F5406B9004F7A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F27630937F2C00963DA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F291309380A900963DA7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +93,7 @@
 				AD62176B30936096009DBBF7 /* README.md */,
 				AD62162830935EE0009DBBF7 /* LICENSE.md */,
 				AD7F76172F5406B9004F7A57 /* NumberBomb */,
+				ADA1F27A30937F2C00963DA7 /* NumberBomb */,
 				AD7F76162F5406B9004F7A57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */,
+				ADA1F27930937F2C00963DA7 /* NumberBomb.app */,
+				ADA1F294309380A900963DA7 /* NumberBomb For iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +141,49 @@
 			productReference = AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ADA1F27830937F2C00963DA7 /* NumberBomb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA1F28130937F3000963DA7 /* Build configuration list for PBXNativeTarget "NumberBomb" */;
+			buildPhases = (
+				ADA1F27530937F2C00963DA7 /* Sources */,
+				ADA1F27630937F2C00963DA7 /* Frameworks */,
+				ADA1F27730937F2C00963DA7 /* Resources */,
+				ADDA33C6309381B600AD8F02 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				ADA1F27A30937F2C00963DA7 /* NumberBomb */,
+			);
+			name = NumberBomb;
+			packageProductDependencies = (
+			);
+			productName = NumberBomb;
+			productReference = ADA1F27930937F2C00963DA7 /* NumberBomb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADA1F293309380A900963DA7 /* NumberBomb For iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA1F29C309380AD00963DA7 /* Build configuration list for PBXNativeTarget "NumberBomb For iOS" */;
+			buildPhases = (
+				ADA1F290309380A900963DA7 /* Sources */,
+				ADA1F291309380A900963DA7 /* Frameworks */,
+				ADA1F292309380A900963DA7 /* Resources */,
+				ADDA33C7309381D600AD8F02 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NumberBomb For iOS";
+			packageProductDependencies = (
+			);
+			productName = "NumberBomb For iOS";
+			productReference = ADA1F294309380A900963DA7 /* NumberBomb For iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,28 +191,38 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					AD7F76142F5406B9004F7A57 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
+					ADA1F27830937F2C00963DA7 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					ADA1F293309380A900963DA7 = {
+						CreatedOnToolsVersion = 26.3;
+						LastSwiftMigration = 2630;
+					};
 				};
 			};
 			buildConfigurationList = AD7F76102F5406B9004F7A57 /* Build configuration list for PBXProject "NumberBomb" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = AD7F760C2F5406B9004F7A57;
+			preferredProjectObjectVersion = 56;
 			productRefGroup = AD7F76162F5406B9004F7A57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AD7F76142F5406B9004F7A57 /* NumberBomb Classic */,
+				ADA1F27830937F2C00963DA7 /* NumberBomb */,
+				ADA1F293309380A900963DA7 /* NumberBomb For iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -124,6 +233,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7F761D2F5406BC004F7A57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F27730937F2C00963DA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F292309380A900963DA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,10 +272,62 @@
 			shellPath = /bin/zsh;
 			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数，作为纯净的构建号\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理，如果是 0 就从 1 开始\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]] || [ \"$TAG_COUNT\" -eq 0 ]; then\n    BUILD_NUMBER=1\nelse\n    BUILD_NUMBER=$TAG_COUNT\nfi\n\n# 优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\n# 使用环境变量自动获取当前 Target 名字，再也不怕复制粘贴穿帮了\necho \"✅ ${TARGET_NAME} CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT)\"\n";
 		};
+		ADDA33C6309381B600AD8F02 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数，作为纯净的构建号\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理，如果是 0 就从 1 开始\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]] || [ \"$TAG_COUNT\" -eq 0 ]; then\n    BUILD_NUMBER=1\nelse\n    BUILD_NUMBER=$TAG_COUNT\nfi\n\n# 优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\n# 使用环境变量自动获取当前 Target 名字，再也不怕复制粘贴穿帮了\necho \"✅ ${TARGET_NAME} CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT)\"\n";
+		};
+		ADDA33C7309381D600AD8F02 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数，作为纯净的构建号\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理，如果是 0 就从 1 开始\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]] || [ \"$TAG_COUNT\" -eq 0 ]; then\n    BUILD_NUMBER=1\nelse\n    BUILD_NUMBER=$TAG_COUNT\nfi\n\n# 优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\n# 使用环境变量自动获取当前 Target 名字，再也不怕复制粘贴穿帮了\necho \"✅ ${TARGET_NAME} CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT)\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD7F76112F5406B9004F7A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F27530937F2C00963DA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA1F290309380A900963DA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,6 +516,162 @@
 			};
 			name = Release;
 		};
+		ADA1F28230937F3000963DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVKBMZMN48;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaoranCao.NumberBomb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ADA1F28330937F3000963DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVKBMZMN48;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.6;
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaoranCao.NumberBomb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		ADA1F29D309380AD00963DA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVKBMZMN48;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HaoranCao.NumberBomb-For-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADA1F29E309380AD00963DA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = MVKBMZMN48;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 5.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.HaoranCao.NumberBomb-For-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -358,6 +689,24 @@
 			buildConfigurations = (
 				AD7F763B2F5406BC004F7A57 /* Debug */,
 				AD7F763C2F5406BC004F7A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA1F28130937F3000963DA7 /* Build configuration list for PBXNativeTarget "NumberBomb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA1F28230937F3000963DA7 /* Debug */,
+				ADA1F28330937F3000963DA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA1F29C309380AD00963DA7 /* Build configuration list for PBXNativeTarget "NumberBomb For iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA1F29D309380AD00963DA7 /* Debug */,
+				ADA1F29E309380AD00963DA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

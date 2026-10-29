@@ -1,0 +1,43 @@
+"game.title" = "NumberBomb";
+"game.input.placeholder" = "Enter a number";
+"game.guess" = "Guess";
+"game.restart" = "Restart";
+"game.tooLow" = "Too low!";
+"game.tooHigh" = "Too high!";
+"game.correct" = "Correct!";
+"game.best %@" = "Best: %@ attempts";
+
+"difficulty.title" = "Choose Difficulty";
+"difficulty.easy" = "Easy (1-50)";
+"difficulty.medium" = "Medium (1-100)";
+"difficulty.hard" = "Hard (1-500)";
+"difficulty.custom" = "Custom";
+"difficulty.custom.lower" = "Min";
+"difficulty.custom.upper" = "Max";
+"difficulty.custom.invalid" = "Min must be less than Max.";
+
+"help.title" = "Help";
+"help.section.overview" = "Overview";
+"help.overview.desc" = "Number Bomb is an extreme minimal guessing game. Guess the hidden number in as few attempts as possible.";
+"help.section.rules" = "How to Play";
+"help.rules.point1" = "Enter a number in the input field and click Guess.";
+"help.rules.point2" = "The game will tell you if your guess is too high or too low.";
+"help.rules.point3" = "Keep guessing until you find the bomb!";
+"help.section.difficulty" = "Difficulties";
+"help.difficulty.easy" = "Easy: 1 to 50.";
+"help.difficulty.medium" = "Medium: 1 to 100.";
+"help.difficulty.hard" = "Hard: 1 to 500.";
+"help.difficulty.custom" = "Custom: Define your own minimum and maximum numbers.";
+"help.section.shortcuts" = "Keyboard Shortcuts";
+"help.shortcut.restart" = "Restart game";
+"help.shortcut.difficulty" = "Change difficulty";
+"help.shortcut.help" = "Open help";
+"help.shortcut.guess" = "Submit guess";
+"help.section.about" = "About";
+"help.about.desc" = "Created by Haoran. Written in SwiftUI. Dedicated to providing the most native, bloat-free gaming experience.";
+
+"common.close" = "Close";
+"common.apply" = "Apply";
+"menu.help" = "NumberBomb Help";
+"menu.newGame" = "New Game";
+"menu.changeDifficulty" = "Change Difficulty…";
