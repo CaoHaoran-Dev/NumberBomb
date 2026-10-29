@@ -14,6 +14,7 @@
 
 /* Begin PBXFileReference section */
 		AD62162730935E66009DBBF7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		AD62162830935EE0009DBBF7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		AD7F76152F5406B9004F7A57 /* NumberBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7F76182F5406B9004F7A57 /* NumberBombApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBombApp.swift; sourceTree = "<group>"; };
 		AD7F761A2F5406B9004F7A57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +36,7 @@
 			isa = PBXGroup;
 			children = (
 				AD62162730935E66009DBBF7 /* .gitignore */,
+				AD62162830935EE0009DBBF7 /* LICENSE.md */,
 				AD7F76172F5406B9004F7A57 /* NumberBomb */,
 				AD7F76162F5406B9004F7A57 /* Products */,
 			);
