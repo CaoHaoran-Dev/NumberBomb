@@ -1,0 +1,39 @@
+# 压缩包
+*.zip
+*.tar
+*.gz
+
+# macOS 系统文件
+.DS_Store
+
+# 依赖包 (Node.js)
+node_modules/
+.pnp
+.pnp.js
+
+# 构建产物
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# 环境变量
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 编辑器
+.vscode/
+.idea/
+
+# 缓存
+.cache/
+.turbo/
+.eslintcache
