@@ -3,23 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD7F76192F5406B9004F7A57 /* NumberBombApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F76182F5406B9004F7A57 /* NumberBombApp.swift */; };
-		AD7F761B2F5406B9004F7A57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7F761A2F5406B9004F7A57 /* ContentView.swift */; };
 		AD7F761D2F5406BC004F7A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD7F761C2F5406BC004F7A57 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD62162730935E66009DBBF7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AD62162830935EE0009DBBF7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		AD7F76152F5406B9004F7A57 /* NumberBomb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberBomb.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD7F76182F5406B9004F7A57 /* NumberBombApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberBombApp.swift; sourceTree = "<group>"; };
-		AD7F761A2F5406B9004F7A57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NumberBomb Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7F761C2F5406BC004F7A57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		AD62162930935F9A009DBBF7 /* Classic */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Classic; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AD7F76122F5406B9004F7A57 /* Frameworks */ = {
@@ -45,7 +45,7 @@
 		AD7F76162F5406B9004F7A57 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD7F76152F5406B9004F7A57 /* NumberBomb.app */,
+				AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,8 +53,7 @@
 		AD7F76172F5406B9004F7A57 /* NumberBomb */ = {
 			isa = PBXGroup;
 			children = (
-				AD7F76182F5406B9004F7A57 /* NumberBombApp.swift */,
-				AD7F761A2F5406B9004F7A57 /* ContentView.swift */,
+				AD62162930935F9A009DBBF7 /* Classic */,
 				AD7F761C2F5406BC004F7A57 /* Assets.xcassets */,
 			);
 			path = NumberBomb;
@@ -63,21 +62,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD7F76142F5406B9004F7A57 /* NumberBomb */ = {
+		AD7F76142F5406B9004F7A57 /* NumberBomb Classic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD7F763A2F5406BC004F7A57 /* Build configuration list for PBXNativeTarget "NumberBomb" */;
+			buildConfigurationList = AD7F763A2F5406BC004F7A57 /* Build configuration list for PBXNativeTarget "NumberBomb Classic" */;
 			buildPhases = (
 				AD7F76112F5406B9004F7A57 /* Sources */,
 				AD7F76122F5406B9004F7A57 /* Frameworks */,
 				AD7F76132F5406B9004F7A57 /* Resources */,
+				AD6216CA30936011009DBBF7 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NumberBomb;
+			fileSystemSynchronizedGroups = (
+				AD62162930935F9A009DBBF7 /* Classic */,
+			);
+			name = "NumberBomb Classic";
 			productName = NumberBomb;
-			productReference = AD7F76152F5406B9004F7A57 /* NumberBomb.app */;
+			productReference = AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD7F76142F5406B9004F7A57 /* NumberBomb */,
+				AD7F76142F5406B9004F7A57 /* NumberBomb Classic */,
 			);
 		};
 /* End PBXProject section */
@@ -124,13 +127,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AD6216CA30936011009DBBF7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/zsh;
+			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]]; then\n    TAG_COUNT=0\nfi\n\n# 构建号 = 8 + tag 数\nBUILD_NUMBER=$((8 + TAG_COUNT))\n\n# 检查生成路径：优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\necho \"✅ RunProcess-Beta CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT + 8)\"\nspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AD7F76112F5406B9004F7A57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD7F761B2F5406B9004F7A57 /* ContentView.swift in Sources */,
-				AD7F76192F5406B9004F7A57 /* NumberBombApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +351,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD7F763A2F5406BC004F7A57 /* Build configuration list for PBXNativeTarget "NumberBomb" */ = {
+		AD7F763A2F5406BC004F7A57 /* Build configuration list for PBXNativeTarget "NumberBomb Classic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AD7F763B2F5406BC004F7A57 /* Debug */,
