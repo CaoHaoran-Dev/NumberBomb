@@ -13,6 +13,7 @@
 /* Begin PBXFileReference section */
 		AD62162730935E66009DBBF7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		AD62162830935EE0009DBBF7 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		AD62176B30936096009DBBF7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD7F76152F5406B9004F7A57 /* NumberBomb Classic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NumberBomb Classic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7F761C2F5406BC004F7A57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +37,7 @@
 			isa = PBXGroup;
 			children = (
 				AD62162730935E66009DBBF7 /* .gitignore */,
+				AD62176B30936096009DBBF7 /* README.md */,
 				AD62162830935EE0009DBBF7 /* LICENSE.md */,
 				AD7F76172F5406B9004F7A57 /* NumberBomb */,
 				AD7F76162F5406B9004F7A57 /* Products */,
@@ -145,7 +147,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/zsh;
-			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]]; then\n    TAG_COUNT=0\nfi\n\n# 构建号 = 8 + tag 数\nBUILD_NUMBER=$((8 + TAG_COUNT))\n\n# 检查生成路径：优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\necho \"✅ RunProcess-Beta CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT + 8)\"\nspace to insert its path.\n";
+			shellScript = "# Type a script or drag a script file from your work# Type a script or drag a script file from your workspace to insert its path.\ncd \"${SRCROOT}\"\n\n# 获取当前的 tag 总数，作为纯净的构建号\nTAG_COUNT=$(git tag | wc -l | tr -d ' ')\n\n# 容错：空值或非数字按 0 处理，如果是 0 就从 1 开始\nif [ -z \"$TAG_COUNT\" ] || ! [[ \"$TAG_COUNT\" =~ ^[0-9]+$ ]] || [ \"$TAG_COUNT\" -eq 0 ]; then\n    BUILD_NUMBER=1\nelse\n    BUILD_NUMBER=$TAG_COUNT\nfi\n\n# 优先用 Xcode 提供的构建目录变量，找不到再兜底\nif [ -f \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nelif [ -f \"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\" ]; then\n    PLIST_PATH=\"${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Info.plist\"\nelse\n    echo \"❌ 找不到 Info.plist，请检查 Build Settings 里的配置\"\n    exit 1\nfi\n\n# 写入 CFBundleVersion\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$PLIST_PATH\"\n\n# 使用环境变量自动获取当前 Target 名字，再也不怕复制粘贴穿帮了\necho \"✅ ${TARGET_NAME} CFBundleVersion = $BUILD_NUMBER (tags=$TAG_COUNT)\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
